@@ -8,6 +8,8 @@
 	overflow: hidden;
 }
 .calculator .c_screen {
+	display:block;
+	padding-top:1px;
 	width: 326px;
 	height: 60px;
 	background-color: #ddd;
