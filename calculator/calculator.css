@@ -13,7 +13,7 @@
 	background-color: #ddd;
 	border-radius: 5px;
 	text-align: center;
-	word-break: break-all;
+	margin-top:10px; 
 }
 .calculator .c_row{
 	margin: 0 23px;
