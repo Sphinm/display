@@ -35,7 +35,7 @@ window.onload = function() {
                         content.innerText = result;
                         count = result.length;
                     } catch(e) {
-                        window.location.href = "https://stackoverflow.com/search?q=js+" + e.message;
+                        content.innerText = e.message;
                     }
                 }
             } else {
