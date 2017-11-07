@@ -8,3 +8,7 @@
 + 小游戏 [贪吃蛇](https://sumin-null.github.io/display/tanchishe.html)
 
 + base64文件编码 [base64](https://sumin-null.github.io/display/base64.html)
+
++ 对浏览器的事件做兼容性封装 [eventUtil](https://sumin-null.github.io/display/event.js)
+
++ 封装一个可支持任意级选择器级联的控件 [cascade](https://sumin-null.github.io/display/jilian.js)
