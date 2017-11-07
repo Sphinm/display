@@ -25,7 +25,11 @@ body { word-break: break-all; }
 	      	document.body.insertAdjacentHTML("afterBegin", '<p>' + e.target.result + '</p>');  // base64 encoded file data!
 	    };
 	    reader.readAsDataURL(event.dataTransfer.files[0]);
-		event.preventDefault();
+		if (event.preventDefault) {
+			event.preventDefault();
+		}else{
+		 	event.returnValue=false;
+		}
 	}, false);
 
 </script>
