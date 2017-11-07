@@ -11,4 +11,4 @@
 
 + 对浏览器的事件做兼容性封装 [eventUtil](https://sumin-null.github.io/display/event.js)
 
-+ 封装一个可支持任意级选择器级联的控件 [cascade](https://sumin-null.github.io/display/jilian.js)
++ 封装一个可支持任意级选择器级联的控件 [cascade](https://sumin-null.github.io/display/jilian.html)
