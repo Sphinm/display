@@ -1,7 +1,6 @@
 //浏览器兼容
 var eventUtil={
-	//添加句柄
-	//怎么给一个元素添加事件
+	//添加元素事件
 	addHandler:function(element,type,handler){
 		if (element.addEventListener) { //支持DOM2
 			element.addEventListener(type,handler,false);
@@ -11,8 +10,7 @@ var eventUtil={
 			element['on'+type]=handler;
 		}
 	},
-	//删除句柄
-	//怎么给一个元素删除事件
+	//删除元素事件
 	removeHandler:function(element,type,handler){
 		if (element.removeEventListener) {
 			element.removeEventListener(type,handler,false);
@@ -22,19 +20,19 @@ var eventUtil={
 			element['on'+type]=null;
 		}
 	},
-	//怎么来获取一个兼容不同浏览器的事件对象
+	//获取一个兼容不同浏览器的事件对象
 	getEvent:function(event){
 		return event?event:window.event;	//ie支持window.event
 	},
-	//怎么获取事件类型
+	//获取事件类型
 	getType:function(event){
 		return event.type;
 	},
-	//怎么获取事件的目标元素
+	//获取事件的目标元素
 	getElement:function(event){
-		return event.target || event.srcElement; ///ie支持event.srcElement
+		return event.target || event.srcElement; 	//ie支持event.srcElement
 	},
-	//怎么阻止事件的默认行为
+	//阻止事件的默认行为
 	preventDefault:function(event){
 		if (event.preventDefault) {
 			event.preventDefault();		//阻止事件的默认行为
@@ -42,7 +40,7 @@ var eventUtil={
 			event.returnValue=false;	//阻止事件的默认行为
 		}
 	},
-	//怎么阻止事件冒泡
+	//阻止事件冒泡
 	stopPropagation:function(event){
 		if (event.stopPropagation) {
 			event.stopPropagation();	//阻止事件冒泡
