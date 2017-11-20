@@ -34,20 +34,20 @@ var eventUtil={
 	getElement:function(event){
 		return event.target || event.srcElement; ///ie支持event.srcElement
 	},
-	//怎么阻止取消事件的默认行为
+	//怎么阻止事件的默认行为
 	preventDefault:function(event){
 		if (event.preventDefault) {
-			event.preventDefault();
+			event.preventDefault();		//阻止事件的默认行为
 		}else{
-			event.returnValue=false;
+			event.returnValue=false;	//阻止事件的默认行为
 		}
 	},
 	//怎么阻止事件冒泡
 	stopPropagation:function(event){
 		if (event.stopPropagation) {
-			event.stopPropagation();
+			event.stopPropagation();	//阻止事件冒泡
 		}else{
-			event.cancelBubble=true;
+			event.cancelBubble=true;	//阻止事件冒泡
 		}
 	}		
 }
