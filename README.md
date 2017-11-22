@@ -15,6 +15,6 @@
 
 + 使用Canvas构建一个哆啦A梦的小人~ [哆啦A梦](https://sumin-null.github.io/display/js_demo/duoLa.html)
 
-+ 轮播图 [A](https://sumin-null.github.io/display/lunbo/lunbo.html)
++ 轮播图 [没做好的轮播图](https://sumin-null.github.io/display/lunbo/lunbo.html)
 
 + 这也是轮播图 [伊泽瑞尔](https://sumin-null.github.io/display/ez/ez.html)
