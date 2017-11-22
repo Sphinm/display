@@ -1,4 +1,4 @@
-### 我的GitHub是一个逐渐添砖添瓦的动态集合
+### 练手
 
 
 + 我有一个计算器 [calculator](https://sumin-null.github.io/display/calculator/calculator.html)
