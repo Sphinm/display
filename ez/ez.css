@@ -1,7 +1,7 @@
 /**********总体布局**************/
 *{margin:0; padding:0; border:0;}
 body{background-color: rgba(80, 80, 80, 0.7);}
-#content{position:relative; width:970px; height:550px; margin:100px auto; border:2px solid #FFF;}
+#content{position:relative; width:970px; height:550px; margin:50px auto; border:2px solid #FFF;}
 #content:hover #tags img{opacity:1;}
 
 /**********图片主要显示区**************/
