@@ -18,15 +18,17 @@
 			padding: 0;
 			position: relative;
 		} 
+/* 		 方法这里画三角形的方法比较特殊，因为我们知道盒模型是由border、padding和内容区组成 */
+/* 		 如果设置了宽高都为0，则只剩下border值，从而达到实现三角形的目的，此处为大漠老师点赞 */
 		.accordionMenu h2:before {
 			border: 5px solid #fff;
 			border-color: #fff transparent transparent;
 			content: "";
+			width: 0;
 			height: 0;
 			position: absolute;
 			right: 10px;
 			top: 15px;
-			width: 0;
 		}
 		.accordionMenu h2 a {
 			background-color: #8f8f8f;
