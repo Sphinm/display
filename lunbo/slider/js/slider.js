@@ -35,7 +35,6 @@
 
 
   function Slider( opt ){
-
     _.extend(this, opt);
 
     // 容器节点 以及 样式设置

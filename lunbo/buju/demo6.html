@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .parent,body,html {height: 100%;overflow: hidden;}
+        .top {position: absolute;top:0;left:0;right: 0;height: 50px;border: 1px solid #258cd1;}
+        .left {position: absolute;top:50px;width: 200px;left:0;bottom: 50px;border: 1px solid #258cd1;}
+        .right {position: absolute;overflow: auto;left: 200px;top:50px;right: 0;bottom: 50px;border: 1px solid #258cd1;}
+        .right .inner {min-height: 1000px;}
+        .bottom {position: absolute;left: 0;bottom: 0;right: 0;height: 50px;border: 1px solid #258cd1;}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="top"></div>
+        <div class="middle">
+            <div class="left"></div>
+            <div class="right">
+                <div class="inner"></div>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>

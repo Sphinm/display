@@ -14,10 +14,8 @@ body,html{
 }
 .m-modal .modal_align,.m-modal .modal_wrap{
 	display:inline-block;
-	vertical-align:baseline;
 	zoom:1;
 	*display:inline;
-	*vertical-align:auto;
 	vertical-align:middle;
 }
 .m-modal .modal_align{

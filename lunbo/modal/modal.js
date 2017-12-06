@@ -1,5 +1,4 @@
 
-
 var emitter = {
   // 注册事件
   on: function(event, fn) {
@@ -45,21 +44,21 @@ var emitter = {
     }
     return this;
   }
-}
+};
 
 !function(){
   // 帮助函数
   // ----------
-
   // 将HTML转换为节点
   function html2node(str){
     var container = document.createElement('div');
+    //删除所有元素的子节点，解析内容字符串，并将生成的节点分配给元素的子元素。(改变元素的HMTL内容)
     container.innerHTML = str;
     return container.children[0];
   }
 
   // 赋值属性
-  // extend({a:1}, {b:1, a:2}) -> {a:1, b:1}
+  // extend({a:1}, {b:1, a:2}) => {a:1, b:1}
   function extend(o1, o2){
     for(var i in o2) if(typeof o1[i] === 'undefined'){
       o1[i] = o2[i]
@@ -68,12 +67,10 @@ var emitter = {
   }
 
 
-
-
   // Modal
   // -------
 
-  var template = 
+  var template =
   '<div class="m-modal">\
     <div class="modal_align"></div>\
     <div class="modal_wrap animated">\
@@ -92,8 +89,8 @@ var emitter = {
 
   function Modal(options){
     options = options || {};
-    // 即 div.m-modal 节点
-    this.container = this._layout.cloneNode(true);
+
+    this.container = this._layout.cloneNode(true);// 即 div.m-modal 节点eNode(true);
     // body 用于插入自定义内容
     this.body = this.container.querySelector('.modal_body');
     // 窗体节点，在应用动画时有用
@@ -201,5 +198,5 @@ var emitter = {
   }
 
 
-}()
+}();
 
