@@ -5,23 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
     <title>EGO漫画</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/util.js"></script>
+    <script src="js/tab.js"></script>
 </head>
 <body>
     <header>
         <!-- 顶栏区 -->
         <div class="g-header">
             <div class="m-logo"></div>
-            <div class="m-tab">
-                <ul class="f-cb">
-                    <li class="z-active"><a href="./index.html">首页</a></li>
-                    <li><a href="#">作品</a></li>
-                    <li><a href="#">圈子</a></li>
-                    <li><a href="#">奇思妙想</a></li>
-                </ul>
-                <div class="tabs-track">
-                    <div class="tabs-thumb" style="width: 68px;left: 0;"></div>
-                </div>
-            </div>
+
+            <!-- tab组件 -->
+
             <div class="m-search">
                 <input type="text" class="u-search" placeholder="输入搜索内容">
                 <div class="u-search-logo"></div>
@@ -60,6 +54,10 @@
 
         <!-- 关于我们 -->
     </footer>
-    <script src="js/tab.js"></script>
+    <script>
+       var tab =  new Tabs()
+       tab.init()
+    </script>
 </body>
+
 </html>
