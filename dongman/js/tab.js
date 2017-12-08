@@ -1,4 +1,4 @@
-!function (_) {
+!function ($) {
 
     // 模板部分
     var template =
@@ -14,28 +14,28 @@
                </div>\
            </div>';
 
-    function Tabs(option) {
-        _.extend(this, option);
-
-        this.index  = this.index || 0;
+    function Tabs(index) {
+        $.extend(this, index);
+        this.index  =this.index || 0;
         // 缓存节点
-        this.element = this._layout.cloneNode(true);
-        this.head = document.querySelector('.g-header');
-        this.reforeNode = document.querySelector('.m-search');
-        this.nTab = this.element.getElementsByTagName('ul')[0];
+        this.container = this._layout.cloneNode(true);
+        this.nTab = this.container.getElementsByTagName('ul')[0];
+        this.nbody = document.getElementsByClassName('m-tabs')[0];
         this.nTabs = this.nTab.children;
-        this.nThumb = this.element.getElementsByClassName('tabs-thumb')[0];
+        this.nThumb = this.container.getElementsByClassName('tabs-thumb')[0];
 
+        // 动态构建滑动条
+        // this.init();
     }
 
-    _.extend(Tabs.prototype,{
+    $.extend(Tabs.prototype,{
 
-        _layout: _.html2node(template),
+        _layout: $.html2node(template),
 
         setCurrent: function (index) {
-            _.delClassName(this.nTabs[this.index],'z-active');
+            $.delClassName(this.nTabs[this.index],'z-active');
             this.index = index;
-            _.addClassName(this.nTabs[index],'z-active');
+            $.addClassName(this.nTabs[index],'z-active');
             this.highlight(index);
         },
 
@@ -46,11 +46,10 @@
         },
 
         init : function () {
-            this.head.insertBefore( this.element,this.reforeNode);
-            for (var i = 0; i < this.nTabs.length; i++) {
+            this.nbody.appendChild(this.container);
+            for (var i = 0; i<this.nTabs.length; i++) {
                 this.nTabs[i].addEventListener('click', function (index) {
                     this.setCurrent(index)
-
                 }.bind(this,[i]))
                 this.nTabs[i].addEventListener('mouseenter', function (index) {
                     this.highlight(index)
