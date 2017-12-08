@@ -1,6 +1,7 @@
 !function ($) {
 
     // 模板部分
+    // 后面需要把链接加上   等把后面页面实现以后  
     var template =
         '<div class="m-tab">\
                 <ul class="f-cb">\
