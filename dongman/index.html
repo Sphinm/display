@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
     <title>EGO漫画</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/util.js"></script>
-    <script src="js/tab.js"></script>
+    <script src="js/module/util.js"></script>
+    <script src="js/module/tab.js"></script>
+    <script src="js/module/search.js"></script>
 </head>
 <body>
     <header>
@@ -14,12 +15,17 @@
         <div class="g-header">
             <div class="m-logo"></div>
 
-            <!-- tab组件 -->
+            <!-- 将m-tab模板渲染到m-tabs里面 -->
+            <div class="m-tabs"></div>
+            <div class="m-search"></div>
 
-            <div class="m-search">
-                <input type="text" class="u-search" placeholder="输入搜索内容">
-                <div class="u-search-logo"></div>
-            </div>
+            <!--<div class="m-search-in">-->
+                <!--<form target="_blank" action="#">-->
+                <!--<input type="text" class="u-search" autocomplete="on" placeholder="输入搜索内容 ">-->
+                <!--<a class="u-search-btn"><i class="u-search-logo"></i></a>-->
+                <!--</form>-->
+            <!--</div>-->
+
             <div class="m-login">
                 <i class="u-login-logo"></i>
                 <span>登录</span>
@@ -54,10 +60,14 @@
 
         <!-- 关于我们 -->
     </footer>
+
     <script>
-       var tab =  new Tabs()
-       tab.init()
+        var tab = new Tabs();
+        tab.init();
+    </script>
+    <script>
+        var search = new Search();
+        search.init();
     </script>
 </body>
-
 </html>
