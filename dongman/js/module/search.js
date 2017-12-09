@@ -3,34 +3,39 @@
    '<div class="m-search-in">\
        <form target="_blank" action="#" accept-charset="UTF-8" method="get">\
        <input type="text" class="u-search" autocomplete="on" placeholder="输入搜索内容 ">\
-       <a class="u-search-btn"><i class="u-search-logo"></i></a>\
+       <a class="u-search-btn"><button class="u-search-logo" type="submit"></button></a>\
        </form>\
        </div>';
    
-   function Search(opt) {
-
-       opt  = opt || {};
+   function Search() {
        // 缓存节点
        this.container = this._layout.cloneNode(true);
-       this.search = this.container.querySelector('.m-search-in');
        this.text = this.container.querySelector('.u-search');
-       this.btn = this.container.querySelector('.u-search-btn');
        this.sbody = document.querySelector('.m-search');
 
-       // ...
        this.init();
-       $.extend(this, opt);
    }
 
    $.extend(Search.prototype, {
        _layout: $.html2node(template),
 
+       // 1.判断输入的内容是否为空，空的话就不做搜索
+       // 2.满足条件后，无论是回车还是点击button都进行搜索
+
+       show: function (event) {
+           if (this.text.value.length === 0 || this.text.value.trim() === ''){
+               event.preventDefault()
+           }
+       },
+
        init:function () {
-            this.sbody.appendChild(this.container);
-            if (this.text.value.length === 0) return false;
+           this.sbody.appendChild(this.container);
 
+           // 由于button在sbody里面 所以需要在外层设置submit事件
+           this.sbody.addEventListener('submit',function (event) {
+               this.show(event)
+           }.bind(this))
        }
-
    });
 
 
