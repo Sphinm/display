@@ -2,7 +2,7 @@
    var template =
    '<div class="m-search-in">\
        <form target="_blank" action="./html/search.html" method="GET">\
-       <input type="text" class="u-search" id="keyword" name="keyword" placeholder="输入搜索内容">\
+       <input type="text" class="u-search" id="keyword" autocomplete="off" name="keyword" placeholder="输入搜索内容">\
        <a class="u-search-btn"><button class="u-search-logo" type="submit"></button></a>\
        </form>\
        </div>';
