@@ -32,6 +32,7 @@ a,a:hover{color:#333;}
 .m-search-in{float: left;margin-left: 37px;margin-top: 25px;}
 .m-search-in form{position: relative;}
 .m-search-in input{width: 193px;height: 36px;padding-left: 15px;border: 2px solid #5ed0ba;color: #898989;border-radius: 5px;}
+.m-search-in input:-webkit-autofill{background-color: rgb(250, 255, 189);color: rgb(0, 0, 0);}
 .m-search-in::-webkit-input-placeholder{color: #898989;}
 .m-search-in .u-search-btn{position: absolute;width: 36px;height: 35px;background: #fff;margin-top: -37px;margin-left:174px; cursor: pointer;border-radius: 5px;}
 .m-search-in .u-search-logo{position: absolute;border:none; width: 20px;height: 20px;margin-left: 8px;margin-top: 8px;background: url("../img/small.png") no-repeat 0 -114px;}
