@@ -9,7 +9,7 @@
 
 + base64文件编码 [base64](https://suminhohu.github.io/display/js_demo/base64.html)
 
-+ 对浏览器的事件做兼容性封装 [eventUtil](https://suminhohu.github.io/displayzujian/event.js)
++ 对浏览器的事件做兼容性封装 [eventUtil](https://suminhohu.github.io/display/zujian/event.js)
 
 + 封装一个可支持任意级选择器级联的控件 [cascade](https://suminhohu.github.io/display/js_demo/jilian.html)
 
