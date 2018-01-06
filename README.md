@@ -16,5 +16,3 @@
 + 使用Canvas构建一个哆啦A梦的小人~ [哆啦A梦](https://suminhohu.github.io/display/js_demo/duoLa.html)
 
 + 这也是轮播图 [伊泽瑞尔](https://suminhohu.github.io/display/js_demo/ez/ez.html)
-
-### 这是一个test
