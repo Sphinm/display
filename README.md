@@ -17,4 +17,4 @@
 
 + 这也是轮播图 [伊泽瑞尔](https://suminhohu.github.io/display/js_demo/ez/ez.html)
 
-+ 延迟加载展示 [图片延迟加载](https://suminhohu.github.io/display/delay/index.html)
++ 延迟加载展示 [打卡控制台查看效果](https://suminhohu.github.io/display/delay/index.html)
