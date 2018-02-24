@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style type="text/css">
+    .img-area{width: 500px;height: 500px; margin: 0 auto;}
+    .my-photo{width:500px; height: 300px}
+</style>
+</head>
+<body>
+<div class="container"> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img1.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img2.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img3.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img4.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img5.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img1.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img2.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img3.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img4.jpg" /></div> 
+    <div class="img-area"><img class="my-photo" alt="loading" data-src="./img/img5.jpg" /></div> 
+</div>
+
+<script type="text/javascript">
+    // 
+    var io = new IntersectionObserver(ioes => {
+
+        ioes.forEach(ioe => {
+            var el = ioe.target
+            var intersectionRatio = ioe.intersectionRatio
+            console.log(intersectionRatio)
+            if (intersectionRatio > 0 && intersectionRatio <= 1) {
+                loadImg(el)
+            }
+            el.onload = el.onerror = () => io.unobserve(el)
+        })
+    })
+
+    function checkImg() {
+
+        var imgs = Array.from(document.querySelectorAll('.my-photo'))
+        imgs.forEach(item => io.observe(item))
+    }
+
+    function loadImg(el) {
+        if (!el.src) {
+            el.src  = el.dataset.src
+        }
+    }
+
+    checkImg()
+</script>
+</body>
+</html>
